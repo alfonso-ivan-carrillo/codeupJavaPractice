@@ -1,3 +1,5 @@
+import java.util.Scanner;   // imports the SCANNER utility
+
 public class HelloWorld {
 
 
@@ -71,5 +73,26 @@ public class HelloWorld {
         r -= e;         // shorthand
         System.out.println(e);
         System.out.println(r);
+
+        String name = "codeup";   // %s is placeholder for string
+
+        System.out.printf("Hello there, %s. Nice to see you. %n", name);
+        System.out.println("hi");
+
+        String greeting = "Salutations";
+        System.out.printf("%s, %s!", greeting, name);   // order of placeholder variable matters
+
+        int num = 45;           // $d is placeholder for integer
+        float numFloat = 34;    // $f is placeholder for float
+
+        System.out.printf("The integer number is %d and the float number is %f. %n", num, numFloat);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter something: ");
+//        String userInput = scanner.next();  // captures only the first word that is typed, whitespace seperates words
+        String userInput = scanner.nextLine();  // captures everything typed into the line
+                                                // nextInt will return the user input as type int
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
+
     }
 }
