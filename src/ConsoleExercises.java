@@ -26,5 +26,18 @@ public class ConsoleExercises {
 
         System.out.println("The 3 words are: " + userInputWord1 + ".");
 
+        Scanner length = new Scanner(System.in);
+        Scanner width = new Scanner(System.in);
+        System.out.println("Please enter the length: ");
+        int lengthRec = Integer.parseInt(length.nextLine());
+        System.out.println("Please enter the width: ");
+        int widthRec = Integer.parseInt(width.nextLine());
+        System.out.println(widthRec);
+        System.out.println("The area of the rectangle is: " + (lengthRec * widthRec) + ".");
+        lengthRec = lengthRec *2;
+        widthRec = widthRec * 2;
+        System.out.println("The perimeter of the rectangle is: " + (lengthRec + widthRec) + ".");
+
+
     }
 }
