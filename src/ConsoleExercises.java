@@ -29,14 +29,28 @@ public class ConsoleExercises {
         Scanner length = new Scanner(System.in);
         Scanner width = new Scanner(System.in);
         System.out.println("Please enter the length: ");
-        int lengthRec = Integer.parseInt(length.nextLine());
+        int lengthRec = length.nextInt();
         System.out.println("Please enter the width: ");
-        int widthRec = Integer.parseInt(width.nextLine());
+        int widthRec = width.nextInt();
         System.out.println(widthRec);
-        System.out.println("The area of the rectangle is: " + (lengthRec * widthRec) + ".");
-        lengthRec = lengthRec *2;
-        widthRec = widthRec * 2;
-        System.out.println("The perimeter of the rectangle is: " + (lengthRec + widthRec) + ".");
+
+        int area = lengthRec * widthRec;
+        int per = (lengthRec * 2) + (widthRec *2);
+
+        System.out.println("The area of the rectangle is: " + area + ".");
+        System.out.println("The perimeter of the rectangle is: " + per + ".");
+
+
+        String testString = "Pearl/Jam/is/the/greatest/band/ever!";
+        System.out.println(testString);
+        Scanner delimitScanner = new Scanner(testString);
+        delimitScanner.useDelimiter("/");
+        System.out.println("new delimiter: " + delimitScanner.delimiter());
+        while(delimitScanner.hasNext()){
+            System.out.println(delimitScanner.next());
+        }
+
+
 
 
     }
