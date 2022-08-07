@@ -93,6 +93,38 @@ public class ControlFlowExercises {
             System.out.println(num + "      |     " + sq + "   |  " + cube );
         }
 
+        System.out.println("--------------------------");
+
+
+
+        String goOn = "y";
+
+        while (goOn.equalsIgnoreCase("y")){
+            System.out.println("Please enter your grade (1 to 100)");
+            Scanner gradeScan = new Scanner(System.in);
+            int userGrade = gradeScan.nextInt();
+
+            Scanner scanGo = new Scanner(System.in);
+            if (userGrade >= 88 && userGrade <= 100){
+                System.out.println("A");
+            } else if (userGrade >= 80 && userGrade <= 88) {
+                System.out.println("B");
+            } else if (userGrade >= 67 && userGrade <= 79) {
+                System.out.println("C");
+            } else if (userGrade >= 60 && userGrade <= 66) {
+                System.out.println("D");
+            } else if (userGrade >= 0 && userGrade <= 59){
+                System.out.println("F");
+            } else {
+                System.out.println("Enter a valid grade.");
+            }
+            System.out.println("continue?");
+            goOn = scanGo.next();
+
+        }
+
+
+
 
 
 
