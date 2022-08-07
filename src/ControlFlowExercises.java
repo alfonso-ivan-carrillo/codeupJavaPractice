@@ -105,12 +105,18 @@ public class ControlFlowExercises {
             int userGrade = gradeScan.nextInt();
 
             Scanner scanGo = new Scanner(System.in);
-            if (userGrade >= 88 && userGrade <= 100){
-                System.out.println("A");
-            } else if (userGrade >= 80 && userGrade <= 88) {
-                System.out.println("B");
-            } else if (userGrade >= 67 && userGrade <= 79) {
-                System.out.println("C");
+            if (userGrade >= 96 && userGrade <= 100){
+                System.out.println("A+");
+            } else if (userGrade >= 88 && userGrade <= 95){
+                System.out.println("A-");
+            } else if (userGrade >= 86 && userGrade <= 88) {
+                System.out.println("B+");
+            } else if (userGrade >= 80 && userGrade <=85) {
+                System.out.println("B-");
+            } else if (userGrade >= 76 && userGrade <= 79) {
+                System.out.println("C+");
+            } else if (userGrade >= 67 && userGrade <= 75) {
+                System.out.println("C-");
             } else if (userGrade >= 60 && userGrade <= 66) {
                 System.out.println("D");
             } else if (userGrade >= 0 && userGrade <= 59){
