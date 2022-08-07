@@ -9,6 +9,8 @@ public class ControlFlowExercises {
             i++;
         }
 
+        System.out.println("--------");
+
         int d = 0;
 
         do {
@@ -57,5 +59,21 @@ public class ControlFlowExercises {
         for (int t = 2; t <= 65536; t = (int) Math.pow(t, 2)){
             System.out.println(t);
         }
+
+        System.out.println("--------");
+
+        for(int m = 1; m <= 100; m++){
+            if(m % 3 == 0 && m % 5 == 0){
+                System.out.println("FizzBuzz!");
+            } else if (m % 3 == 0) {
+                System.out.println("Fizz!");
+            } else if (m % 5 == 0){
+                System.out.println("Buzz!");
+            } else {
+                System.out.println(m);
+            }
+        }
+
+
     }
 }
