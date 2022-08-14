@@ -57,6 +57,11 @@ public class StringLesson {
 
         System.out.println(soccer.trim());  // Returns a copy of the string without leading and trailing whitespaces.
 
+        System.out.println(soccer.endsWith("l"));  // returns a boolean
+
+        System.out.println(soccer.isEmpty());   // returns a boolean
+
+        System.out.println(soccer.contains("Liverpool")); // returns a boolean
 
     }
 }
