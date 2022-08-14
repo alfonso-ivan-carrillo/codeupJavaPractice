@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodExercises {
 
     public static int add(int num1, int num2){
@@ -52,6 +54,20 @@ public class MethodExercises {
             return total;
         }
     }
+    public static int getInteger(int min, int max){
+        Scanner scan = new Scanner(System.in);
+        System.out.printf("Enter a number between %d and %d. \n", min, max);
+        int userInput = scan.nextInt();
+        if (userInput < min || userInput > max){
+            System.out.printf("The number %d is not in range. \n", userInput);
+            return getInteger( min, max);
+        } else {
+            System.out.printf("The number %d is within range.", userInput);
+            return userInput;
+        }
+
+    }
+
 
     public static void main(String[] args) {
 
@@ -64,6 +80,8 @@ public class MethodExercises {
 
         System.out.println(multLoop(5,5));
         System.out.println(multRec(5,5));
+
+        getInteger(1, 10);
 
 
     }
