@@ -62,11 +62,45 @@ public class MethodExercises {
             System.out.printf("The number %d is not in range. \n", userInput);
             return getInteger( min, max);
         } else {
-            System.out.printf("The number %d is within range.", userInput);
+            System.out.printf("The number %d is within range. \n", userInput);
             return userInput;
         }
 
     }
+
+    public static void factorial(){
+        String keepGoing = "yes";
+        long fac = 1;
+
+        while (keepGoing.equals("yes")){
+            int userNum = getInteger(1, 10);
+            for(int i = 1; i <= userNum; i++){
+                fac *= i;
+                System.out.println(fac);
+            }
+//            System.out.println(fac);
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Keep going?");
+            keepGoing = scan.nextLine();
+        }
+    }
+//public static void factorial() {
+//    Scanner sc = new Scanner(System.in).useDelimiter("\n");
+//
+//    String willContinue;
+//
+//    do {
+//        long userFactorial = 1;
+//        int userNumber = getInteger(1, 10);
+//        System.out.printf("You chose %d!\n", userNumber);
+//        for(int i = 1; i <= userNumber; i++) {
+//            userFactorial *= i;
+//        }
+//        System.out.println(userFactorial);
+//        System.out.println("Would you like to continue? (yes/no)");
+//        willContinue = sc.nextLine();
+//    } while (willContinue.equalsIgnoreCase("yes"));
+//}
 
 
     public static void main(String[] args) {
@@ -81,7 +115,9 @@ public class MethodExercises {
         System.out.println(multLoop(5,5));
         System.out.println(multRec(5,5));
 
-        getInteger(1, 10);
+//        getInteger(1, 10);
+
+        factorial();
 
 
     }
