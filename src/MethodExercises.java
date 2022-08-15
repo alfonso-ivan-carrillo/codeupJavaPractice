@@ -102,6 +102,29 @@ public class MethodExercises {
 //    } while (willContinue.equalsIgnoreCase("yes"));
 //}
 
+    public static void diceGame(){
+
+        String rollDice = "yes";
+
+        Scanner ask = new Scanner(System.in);
+        System.out.println("Roll dice?");
+        rollDice = ask.nextLine();
+        System.out.println(rollDice);
+
+        while (rollDice.equalsIgnoreCase("yes")) {
+            Scanner numSides = new Scanner(System.in);
+            System.out.println("Please enter the number of sides to dice.");
+            int sides = numSides.nextInt();
+
+            int dice1 = (int) (Math.random() * sides) + 1;
+            int dice2 = (int) (Math.random() * sides) + 1;
+            System.out.println(dice1);
+            System.out.println(dice2);
+            System.out.println("Roll Dice?");
+            rollDice = ask.nextLine();
+        }
+
+    }
 
     public static void main(String[] args) {
 
@@ -117,8 +140,9 @@ public class MethodExercises {
 
 //        getInteger(1, 10);
 
-        factorial();
+//        factorial();
 
+        diceGame();
 
     }
 }
