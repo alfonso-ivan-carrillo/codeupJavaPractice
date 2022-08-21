@@ -9,6 +9,7 @@ public class HighLow {
         System.out.println("Guess a number between 1 and 100");
         int userGuess = scan.nextInt();
         String keepGoing = "yes";
+        int counter = 0;
 
 
         while(keepGoing == "yes") {
@@ -17,10 +18,25 @@ public class HighLow {
                 highLow();
             } else if (userGuess < cpuNumber) {
                 System.out.println("Higher!");
+                counter += 1;
+                System.out.println(counter);
+                if (counter == 5){
+                    System.out.println("Max guess limit reached.");
+                    keepGoing = "no";
+                    break;
+                }
                 System.out.println("Guess again.");
                 userGuess = scan.nextInt();
+
             } else if (userGuess > cpuNumber) {
                 System.out.println("Lower!");
+                counter += 1;
+                System.out.println(counter);
+                if (counter == 5){
+                    System.out.println("Max guess limit reached.");
+                    keepGoing = "no";
+                    break;
+                }
                 System.out.println("Guess again.");
                 userGuess = scan.nextInt();
             } else if (userGuess == cpuNumber) {
