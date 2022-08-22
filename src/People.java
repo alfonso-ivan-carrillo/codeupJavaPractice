@@ -42,6 +42,29 @@ public class People {
         p2.setName("Kathy");
         System.out.println(p2.getName());
 
+        System.out.println("-------------");
+
+        People people1 = new People("John");
+        People people2 = new People("John");
+        System.out.println(people1.getName().equals(people2.getName()));    // true
+        System.out.println(people1 == people2);                             // false
+
+        System.out.println("-----------");
+
+        People people3 = new People("Jon");
+        People people4 = people3;
+        System.out.println(people3 == people4);     // true
+
+        System.out.println("-----------");
+
+        People people5 = new People("Jack");
+        People people6 = people5;
+        System.out.println(people5.getName());
+        System.out.println(people6.getName());
+//        people5.setName("Jane");
+        people6.setName("jojo");
+        System.out.println(people5.getName());
+        System.out.println(people6.getName());
     }
 
 }
