@@ -10,10 +10,11 @@ public class Person {
     // A constructor is a special method that is called when an object is created.
     // A constructor has the same name as the class and does not define a return type.
     // Constructors, like any other method, can accept arguments and be overloaded.
-
+    // A common use case for constructors is to set, or provide default values for, an object's fields
     public String sayHello(){
         return String.format("Hello from %s %s!", firstName, lastName);
     }
+
 
     public static long worldPopulation = 7_500_000_000L; // class property
     public String name; // instance property
@@ -28,7 +29,7 @@ public class Person {
         ethan.firstName = "Ethan";      // instance fields
         ethan.lastName = "Carrillo";    // instance fields
         // The above code will print out:
-        //  A Person is being created!
+        //  *** A Person is being created!  ***
         // because the constructor is called whenever we use the new keyword to create an instance of the class
 
         //A Person is being created!
@@ -71,5 +72,10 @@ public class Person {
 
         // DONT DO THIS, it will not compile
         // System.out.println(Person.name);
+
+        // Each person has a different name, but the world population is the same for all people.
+        // You cannot access an instance variable in a static context (only individual people have names, not people in general).
+
+
     }
 }
