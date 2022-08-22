@@ -15,5 +15,11 @@ public class MathTest {
                                         // will result in compile time error
         System.out.println(s3.shareGrade());  // do this instead
 
+        People p3 = new People("alfonso");
+        System.out.println(p3.getName());
+        //System.out.println(p3.name);  // will not work because of private field and visibility
+        p3.setName("Alfonso");
+        System.out.println(p3.getName());
+
     }
 }
