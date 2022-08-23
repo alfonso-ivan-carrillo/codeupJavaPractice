@@ -11,5 +11,6 @@ public class InputTest {
         System.out.println(two.getInt());
         System.out.println(two.getDouble(2.5, 15.5));
         System.out.println(two.getDouble());;
+        System.out.println(two.getString("Enter your name:"));
     }
 }

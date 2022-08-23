@@ -11,6 +11,12 @@ public class Input {
         return String.format("You entered: %s", output);
     }
 
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String output = scanner.nextLine();
+        return String.format("You entered: %s", output);
+    }
+
     public boolean yesNo(){
         System.out.println("Yes or no?");
         String answer = scanner.nextLine();
