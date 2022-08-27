@@ -1,31 +1,29 @@
 package Shapes;
 
 public class Circle {
-    private Double radius;
+    private double radius;
 
     public Circle() {
     }
 
-    public Circle(Double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Double getRadius() {
+    public double getRadius() {
         return radius;
     }
 
-    public void setRadius(Double radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public double getCir(double radius){
-        double cir = 2* Math.PI * radius;
-        return cir;
+    public double getCir(){
+        return 2* Math.PI * radius;
     }
 
-    public double gitArea(double radius){
-        double area = Math.PI * (radius * radius );
-        return area;
+    public double gitArea(){
+        return Math.PI * (radius * radius );
     }
 
 }

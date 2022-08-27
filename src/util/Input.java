@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
+
     public String getString(){
         System.out.println("Enter something:");
         String output = scanner.nextLine();
@@ -20,7 +21,16 @@ public class Input {
     public boolean yesNo(){
         System.out.println("Yes or no?");
         String answer = scanner.nextLine();
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase( "yup")){
+        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String answer = scanner.nextLine();
+        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")){
             return true;
         } else {
             return false;
@@ -44,6 +54,12 @@ public class Input {
         return number;
     }
 
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        int number = scanner.nextInt();
+        return number;
+    }
+
     public double getDouble(double min, double max){
         System.out.println("Enter a double.");
         double userInput = scanner.nextDouble();
@@ -57,6 +73,11 @@ public class Input {
 
     public double getDouble(){
         System.out.println("Enter a double.");
+        double userInput = scanner.nextDouble();
+        return userInput;
+    }
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         double userInput = scanner.nextDouble();
         return userInput;
     }
