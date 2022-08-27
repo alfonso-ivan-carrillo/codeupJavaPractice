@@ -15,7 +15,7 @@ public class Input {
     public String getString(String prompt){
         System.out.println(prompt);
         String output = scanner.nextLine();
-        return String.format("You entered: %s", output);
+        return output;
     }
 
     public boolean yesNo(){

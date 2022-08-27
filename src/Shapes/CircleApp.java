@@ -2,7 +2,7 @@ package Shapes;
 import util.Input;
 public class CircleApp {
 
-    CircleApp circles;
+//    CircleApp circles;
 
     public static void askRad(){
         Input input = new Input();
