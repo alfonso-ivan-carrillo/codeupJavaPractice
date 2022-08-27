@@ -22,9 +22,11 @@ public class CircleApp {
 
     public static void main(String[] args) {
 
-
-    askRad();
-
+    Circle one = new Circle(5.5);
+        System.out.println(one.getCir());
+    CircleApp.askRad();
+    one.setRadius(8);
+        System.out.println(one.getCir());
 
     }
 }
