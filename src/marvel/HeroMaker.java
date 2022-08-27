@@ -3,7 +3,7 @@ package marvel;
 import util.Input;
 
 public class HeroMaker {
-
+    HeroMaker makers;
     public static void maker(){
         Input one = new Input();
 
@@ -19,6 +19,8 @@ public class HeroMaker {
     }
 
     public static void main(String[] args) {
+
+
         maker();
     }
 
