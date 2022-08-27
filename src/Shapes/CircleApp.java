@@ -6,14 +6,17 @@ public class CircleApp {
 
     public static void askRad(){
         Input input = new Input();
+        int count = 0;
 
         do {
             Circle one = new Circle(input.getDouble("Enter the radius of your circle:"));
             System.out.printf("The radius you entered is %,.2f and the area is %,.3f. \n", one.getRadius(), one.gitArea());
             System.out.printf("The radius you entered is %,.2f and the circumference is %,.3f. \n", one.getRadius(), one.getCir());
+            input.yesNo("Would you like to go again?");
+            count++;
 
-        } while (input.yesNo("Again?"));
-
+        } while (input.yesNo());
+        System.out.println(count + " number of circles created.");
     }
 
 
