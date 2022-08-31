@@ -23,25 +23,14 @@ public class MoviesApplication {
         }
     }
 
-    public static void filterCategory(){
+    public static void filterCategory(String category){
         Movie[] allMovies = MoviesArray.findAll();
 
         for(Movie movie : allMovies){
-            if(movie.getCategory().equalsIgnoreCase("drama")){
-                System.out.println(movie.getCategory().equalsIgnoreCase("drama"));
-            } else if (movie.getCategory().equalsIgnoreCase("horror")){
-                System.out.println(movie.getCategory());
-            } else if (movie.getCategory().equalsIgnoreCase("animated")){
-                System.out.println(movie.getCategory().equalsIgnoreCase("animated"));
-            } else if (movie.getCategory().equalsIgnoreCase("scifi")){
-                System.out.println(movie.getCategory().equalsIgnoreCase("scifi"));
-            } else {
-                System.out.println("Data error, try again.");
-
+            if(movie.getCategory().equalsIgnoreCase(category)){
+                System.out.println(movie.getName() + " : " + movie.getCategory());
             }
-
         }
-
     }
 
     public static void selector(){
@@ -60,7 +49,7 @@ public class MoviesApplication {
 //        selector();
 
         filterMovies();
-        filterCategory();
+        filterCategory("horror");
 
     }
 }
