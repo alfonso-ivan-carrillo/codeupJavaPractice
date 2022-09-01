@@ -3,9 +3,18 @@ public class Person {
     public String firstName;
     public String lastName;
 
+    public String name; // instance property
+    public static long worldPopulation = 7_500_000_000L; // class property
+
     public Person(String name) {
         this.name = name;
     }
+    public Person(String firstName, String lastName ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+
 
     public String getName() {
         return name;
@@ -13,6 +22,22 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
+
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
 
     // the Person constructor
@@ -26,10 +51,6 @@ public class Person {
     public String sayHello(){
         return String.format("Hello from %s %s!", firstName, lastName);
     }
-
-
-    public static long worldPopulation = 7_500_000_000L; // class property
-    public String name; // instance property
 
     public static void main(String[] args) {
 
