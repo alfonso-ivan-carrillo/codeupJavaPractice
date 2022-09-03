@@ -2,11 +2,10 @@ package marvel;
 
 public class Hero {
     public String name;
-    private String power;
+    protected String power;
 
     public Hero () {
     }
-
     public Hero(String name){
         this.name = name;
     }

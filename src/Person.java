@@ -3,7 +3,9 @@ public class Person {
     public String firstName;
     public String lastName;
 
-    public String name; // instance property
+    protected String name; // instance property
+
+    private int age;
     public static long worldPopulation = 7_500_000_000L; // class property
 
     public Person(String name) {
@@ -38,6 +40,13 @@ public class Person {
 
     public void setLastName(String lastName){
         this.lastName = lastName;
+    }
+
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
     }
 
     // the Person constructor
