@@ -1,6 +1,9 @@
 public class Employee extends Person{
     private double salary;
 
+    public Employee() {
+    }
+
     // Inheritance - extend, or inherit from another class with the extends keyword in the
     // class definition. We call these subclasses, and the classes that are being inherited
     // from / extended superclasses. A subclass inherits all the fields of it's
@@ -13,6 +16,10 @@ public class Employee extends Person{
 
     public void doWork(){
         System.out.println("Work, work.....");
+    }
+
+    public String work(){
+        return "Filling out TPS reports";
     }
 
     // Method Overriding
