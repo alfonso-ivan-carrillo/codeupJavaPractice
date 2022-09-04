@@ -5,8 +5,8 @@ import util.Input;
 import java.util.Arrays;
 
 public class HeroMaker {
-    private static Object Hero;  // to create a Hero Object
-    HeroMaker makers;
+//    private static Object Hero;  // to create a Hero Object
+//    HeroMaker makers;
     public static void maker(){
         Input one = new Input();
 
@@ -38,11 +38,38 @@ public class HeroMaker {
         league[1] = new Hero("deadpool", "mutant");
 
 
-
-
         for (int i = 0; i < league.length; i++){
             System.out.println(league[i].getName()+ "--" + league[i].getPower());;
         }
-    }
+        System.out.println("__________________");
 
+
+        Villian eric = new Villian("Magneto");
+        eric.setPower("mutant");
+
+        System.out.println(eric.name);
+        System.out.println(eric.power);
+        System.out.println(eric.team());
+        System.out.println("----------------");
+        Villian maxon = new Villian("Red Skull");
+        maxon.setPower("artificial");
+        System.out.println(maxon.name);
+        System.out.println(maxon.power);
+        System.out.println(maxon.team());
+        System.out.println("----------------");
+
+        Hero wolverine = new Hero("wolverine", "mutant", "Logan");
+
+        System.out.println(wolverine.name);
+        System.out.println(wolverine.power);
+        System.out.println(wolverine.team());
+
+        System.out.println("----------------");
+        System.out.println("----------------");
+
+
+
+
+
+    }
 }

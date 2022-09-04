@@ -2,8 +2,14 @@ package marvel;
 
 public class Villian extends Hero{
 
+    public Villian(){
+    }
     public Villian(String villianName){
         super(villianName);
+    }
+
+    public Villian(String villianName, String power, String alterEgo){
+        super(villianName, power, alterEgo);
     }
 
 
@@ -19,25 +25,4 @@ public class Villian extends Hero{
 
 
 
-    public static void main(String[] args) {
-        Villian eric = new Villian("Magneto");
-        eric.setPower("mutant");
-
-        System.out.println(eric.name);
-        System.out.println(eric.power);
-        System.out.println(eric.team());
-        System.out.println("----------------");
-        Villian maxon = new Villian("Red Skull");
-        maxon.setPower("artificial");
-        System.out.println(maxon.name);
-        System.out.println(maxon.power);
-        System.out.println(maxon.team());
-
-
-
-
-
-
-
-    }
 }

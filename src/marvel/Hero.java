@@ -3,6 +3,7 @@ package marvel;
 public class Hero {
     public String name;
     protected String power;
+    protected String alterEgo;
 
     public Hero () {
         System.out.println("Hero or Villian, only time will tell.");
@@ -13,6 +14,13 @@ public class Hero {
     public Hero (String name, String power){
         this.name = name;
         this.power = power;
+    }
+
+    public Hero(String name, String power, String alterEgo){
+        this.name = name;
+        this.power = power;
+        this.alterEgo = alterEgo;
+        System.out.printf("%s, keep your alterego name %s hidden. \n", name, alterEgo);
     }
 
     public String getName(){
@@ -41,22 +49,4 @@ public class Hero {
         }
     }
 
-    public static void main(String[] args) {
-
-        Hero wolverine = new Hero();
-        wolverine.setName("wolverine");
-        wolverine.setPower("mutant");
-        System.out.println(wolverine.getName());
-        System.out.println(wolverine.getPower());
-        System.out.println(wolverine.team());
-
-        Hero cptRogers = new Hero();
-        cptRogers.setPower("artificial");
-        cptRogers.setName("Steve Rogers");
-        System.out.println(cptRogers.getName());
-        System.out.println(cptRogers.getPower());
-        System.out.println(cptRogers.team());
-
-
-    }
 }
