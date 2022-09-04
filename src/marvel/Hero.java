@@ -5,6 +5,7 @@ public class Hero {
     protected String power;
 
     public Hero () {
+        System.out.println("Hero or Villian, only time will tell.");
     }
     public Hero(String name){
         this.name = name;

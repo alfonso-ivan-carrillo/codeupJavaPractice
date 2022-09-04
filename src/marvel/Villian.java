@@ -6,6 +6,7 @@ public class Villian extends Hero{
         super(villianName);
     }
 
+
     public String team(){
         if (power.equalsIgnoreCase("mutant")){
             return ("The villian " + name + " belongs to the Hell-Fire Club.");
@@ -31,6 +32,8 @@ public class Villian extends Hero{
         System.out.println(maxon.name);
         System.out.println(maxon.power);
         System.out.println(maxon.team());
+
+
 
 
 
