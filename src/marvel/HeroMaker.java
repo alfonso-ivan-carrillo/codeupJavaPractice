@@ -44,11 +44,16 @@ public class HeroMaker {
         System.out.println("__________________");
 
 
-        Villian eric = new Villian("Magneto");
+        Villian eric = new Villian();
+        eric.setName("Magneto");
         eric.setPower("mutant");
+        eric.setAlterEgo("eric");
+
+
 
         System.out.println(eric.name);
         System.out.println(eric.power);
+        System.out.println(eric.alterEgo);
         System.out.println(eric.team());
         System.out.println("----------------");
         Villian maxon = new Villian("Red Skull");
@@ -56,6 +61,7 @@ public class HeroMaker {
         System.out.println(maxon.name);
         System.out.println(maxon.power);
         System.out.println(maxon.team());
+        System.out.println(maxon.getPower());
         System.out.println("----------------");
 
         Hero wolverine = new Hero("wolverine", "mutant", "Logan");

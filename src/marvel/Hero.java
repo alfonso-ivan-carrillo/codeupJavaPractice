@@ -39,6 +39,14 @@ public class Hero {
         this.power = power;
     }
 
+    public String getAlterEgo(){
+        return alterEgo;
+    }
+
+    public void setAlterEgo(String alterEgo){
+        this.alterEgo = alterEgo;
+    }
+
     public String team(){
         if (power.equalsIgnoreCase("mutant")){
             return ("The hero " + name + " belongs to the X-Men.");
