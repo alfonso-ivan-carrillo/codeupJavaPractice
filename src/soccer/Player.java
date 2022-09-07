@@ -14,6 +14,8 @@ abstract class Player {
     protected String name;
     protected String position;
 
+    public int number;
+
     public Player(){
     }
     public Player(String name){
@@ -22,6 +24,11 @@ abstract class Player {
     public Player(String name, String position){
         this.name = name;
         this.position = position;
+    }
+    public Player(String name, String position, int number){
+        this.name = name;
+        this.position = position;
+        this.number =number;
     }
 
     public String getName(){
@@ -40,6 +47,16 @@ abstract class Player {
         this.position = position;
     }
 
+    public int getNumber() { return  number; }
+
+    public void setNumber(int number) {this.number = number; }
+
+    // declare an ABSTRACT METHOD by using the Keyword Abstract and any
     public abstract String play();
+    public abstract String passBall();
+
+    public abstract String shootBall();
+
+    public abstract String cornerBall();
 
 }
