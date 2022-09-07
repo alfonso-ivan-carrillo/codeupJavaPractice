@@ -8,4 +8,8 @@ public class Hawk implements Predator{
         System.out.println("The hawk is hunting!");
     }
 
+    public void hunted(){
+        System.out.println("The hawk is being hunted!");
+    }
+
 }

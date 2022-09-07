@@ -16,11 +16,14 @@ public class AnimalAction {
     // Using Main Method to compile and run code
     public static void main(String[] args) {
 
-        Rabbit roger = new Rabbit();
+        Rabbit roger = new Rabbit("roger");
+        System.out.println(roger.name);
         roger.flee();
 
         Hawk hawkins = new Hawk();
+
         hawkins.hunt();
+        hawkins.hunted();
 
         Fish nemo = new Fish();
         nemo.flee();

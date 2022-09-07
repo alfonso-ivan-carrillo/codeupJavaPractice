@@ -10,6 +10,10 @@ public class Fish implements Prey, Predator{
         System.out.println("This fish is hunting smaller fish.");
     }
 
+    public void hunted(){
+        System.out.println("The fish is being hunted!");
+    }
+
     // FISH Class implements the PREY Abstract FLEE() Method
     @Override
     public void flee() {
