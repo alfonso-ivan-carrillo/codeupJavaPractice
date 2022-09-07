@@ -16,6 +16,9 @@ abstract class Player {
 
     public Player(){
     }
+    public Player(String name){
+        this.name = name;
+    }
     public Player(String name, String position){
         this.name = name;
         this.position = position;
@@ -24,8 +27,17 @@ abstract class Player {
     public String getName(){
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getPosition(){
         return position;
+    }
+
+    public void setPosition(String position){
+        this.position = position;
     }
 
     public abstract String play();

@@ -7,7 +7,10 @@ public class Game {
         // Player player = new Player();
         // Will not compile, Player Class is defined as an Abstract and cannot be directly instantiated.
 
-        Midfield midfield = new Midfield();
+        Midfield ethan = new Midfield();
         Forward forward = new Forward();
+
+
+
     }
 }
