@@ -44,3 +44,39 @@ class Forward extends Player{
         return "go for goal";
     }
 }
+
+class Defender extends Player{
+
+    public String play(){
+        return "stop attack";
+    }
+
+    public String passBall(){
+        return "build from the back";
+    }
+
+    public String shootBall(){
+        return "if a rare opportunity presents itself shoot";
+    }
+
+    public String cornerBall(){
+        return "header to the goal";
+    }
+}
+
+class Goalie extends Player{
+    public String play(){
+        return "stop ball";
+    }
+    public String passBall(){
+        return "begin buildup";
+    }
+
+    public String shootBall(){
+        return "stop ball";
+    }
+
+    public String cornerBall(){
+        return "stop ball";
+    }
+}
