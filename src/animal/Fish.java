@@ -2,6 +2,8 @@ package animal;
 
 public class Fish implements Prey, Predator{
 
+    // A class that implements an interface must provide an implementation for each method defined by the interface.
+
     // FISH Class implements the PREDATOR Abstract HUNT() Method
     @Override
     public void hunt() {

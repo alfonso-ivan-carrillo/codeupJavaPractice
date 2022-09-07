@@ -1,6 +1,7 @@
 package animal;
 
 public class Hawk implements Predator{
+    // A class that implements an interface must provide an implementation for each method defined by the interface.
 
     // HAWK Class implements the PREDATOR Abstract Hunt Method
     public void hunt(){

@@ -1,7 +1,6 @@
 package soccer;
 
-public class Team {
-
+public class LineUp {
 
     public static void main(String[] args) {
         // Player player = new Player();
@@ -27,6 +26,18 @@ public class Team {
         System.out.println(fecho.passBall());
         System.out.println(fecho.shootBall());
         System.out.println(fecho.cornerBall());
+
+
+        Barca barca = new Barca("Barcelona", "Xavi");
+        System.out.println(barca.manager);
+        System.out.println(barca.teamName);
+        barca.bench();
+        barca.roster();
+        barca.starters(11);
+
+
+
+
 
     }
 }
