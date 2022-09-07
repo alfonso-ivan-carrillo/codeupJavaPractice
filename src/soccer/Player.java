@@ -51,7 +51,8 @@ abstract class Player {
 
     public void setNumber(int number) {this.number = number; }
 
-    // declare an ABSTRACT METHOD by using the Keyword Abstract and any
+    // declare an ABSTRACT METHOD by using the Keyword Abstract
+    // you must implement the methods in the Class that are Extending the abstract class
     public abstract String play();
     public abstract String passBall();
 

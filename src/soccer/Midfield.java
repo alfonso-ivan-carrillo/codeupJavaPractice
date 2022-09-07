@@ -2,8 +2,23 @@ package soccer;
 
 class Midfield extends Player{
 
+    public Midfield() {
+    }
+
+    public Midfield(String name) {
+        super(name);
+    }
+
+    public Midfield(String name, String position) {
+        super(name, position);
+    }
+
+    public Midfield(String name, String position, int number) {
+        super(name, position, number);
+    }
+
     public String play(){
-        return "distribute ball";
+        return "Player Core Play: distribute ball";
     }
     // the Midfield Class MUST define a PLAY() method because it inherits from the Player and is not defined as an Abstract.
 
@@ -13,70 +28,70 @@ class Midfield extends Player{
     // deals with handling player names and position.
 
     public String passBall(){
-        return "pass to advance the ball up the field or retain possession";
+        return "Pass Ball: pass to advance the ball up the field or retain possession";
     }
 
     public String shootBall(){
-        return "if no pass option available and within range go for goal";
+        return "Shoot Ball: if no pass option available and within range go for goal";
     }
 
     public String cornerBall(){
-        return "get to player in good position to score";
+        return "Corner Ball: get to player in good position to score";
     }
 
 }
 
 class Forward extends Player{
     public String play(){
-        return "score goal";
+        return "Player Core Play: score goal";
     }
     //the Midfield Class MUST define a PLAY() method because it inherits from the Player and is not defined as an Abstract.
 
     public String passBall(){
-        return "if no shot available, pass to player with opportunity to score";
+        return "Pass Ball: if no shot available, pass to player with opportunity to score";
     }
 
     public String shootBall(){
-        return "if within range, go for goal";
+        return "Shoot Ball: if within range, go for goal";
     }
 
     public String cornerBall(){
-        return "go for goal";
+        return "Corner Ball: go for goal";
     }
 }
 
 class Defender extends Player{
 
     public String play(){
-        return "stop attack";
+        return "Player Core Play: stop attack";
     }
 
     public String passBall(){
-        return "build from the back";
+        return "Pass Ball: build from the back";
     }
 
     public String shootBall(){
-        return "if a rare opportunity presents itself shoot";
+        return "Shoot Ball: if a rare opportunity presents itself shoot";
     }
 
     public String cornerBall(){
-        return "header to the goal";
+        return "Corner Ball: header to the goal";
     }
 }
 
 class Goalie extends Player{
     public String play(){
-        return "stop ball";
+        return "Player Core Play: stop ball";
     }
     public String passBall(){
-        return "begin buildup";
+        return "Pass Ball: begin buildup";
     }
 
     public String shootBall(){
-        return "stop ball";
+        return "Shoot Ball: stop ball";
     }
 
     public String cornerBall(){
-        return "stop ball";
+        return "Corner Ball: stop ball";
     }
 }
