@@ -17,6 +17,8 @@ class Midfield extends Player{
         super(name, position, number);
     }
 
+    // the play(), passBall(), shootBall() and cornerBall() are abstract methods from the player class and each
+    // extending class (midfield, forward, etc) must implement its own verision of the method
     public String play(){
         return "Player Core Play: distribute ball";
     }
