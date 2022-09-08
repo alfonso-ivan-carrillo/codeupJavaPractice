@@ -44,6 +44,8 @@ class Midfield extends Player{
 }
 
 class Forward extends Player{
+
+
     public String play(){
         return "Player Core Play: score goal";
     }
@@ -64,6 +66,21 @@ class Forward extends Player{
 
 class Defender extends Player{
 
+    public Defender() {
+    }
+
+    public Defender(String name) {
+        super(name);
+    }
+
+    public Defender(String name, String position) {
+        super(name, position);
+    }
+
+    public Defender(String name, String position, int number) {
+        super(name, position, number);
+    }
+
     public String play(){
         return "Player Core Play: stop attack";
     }
@@ -82,6 +99,18 @@ class Defender extends Player{
 }
 
 class Goalie extends Player{
+
+    public Goalie(){};
+    public Goalie(String name){
+        super(name);
+    }
+    public Goalie(String name, String position){
+        super(name, position);
+    }
+    public Goalie(String name, String position, int number){
+        super(name, position, number);
+    }
+
     public String play(){
         return "Player Core Play: stop ball";
     }
