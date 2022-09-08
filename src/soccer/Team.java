@@ -1,6 +1,6 @@
 package soccer;
 
-abstract class Team {
+abstract class Team implements Sport{
     // Fields/Variables
     public String teamName;
     public String managerName;
@@ -70,8 +70,8 @@ abstract class Team {
     }
 
     // Abstract Methods
-    public abstract String teamChant(String teamChant);
-    public abstract String teamColors(String teamColors);
+    public abstract String teamChant();
+    public abstract String teamColors();
 
 
 }

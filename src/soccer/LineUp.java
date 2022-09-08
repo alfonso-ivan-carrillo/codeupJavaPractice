@@ -28,8 +28,17 @@ public class LineUp {
 
         System.out.println("_______________________");
 
+        Team barca = new SoccerTeam("Barcelona FC", "Xavi", "Catalan", 24, 6);
+        System.out.println(barca.teamName);
+        barca.setTeamName("Barca FC");
+        System.out.println(barca.teamName);
+        System.out.println(barca.teamName+ " : " + barca.mascot + " : " + barca.managerName);
+        System.out.println(barca.teamChant());
+        System.out.println(barca.teamColors());
 
 
+        barca.sport();
+        barca.division();
 
 
 
