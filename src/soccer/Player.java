@@ -1,6 +1,9 @@
 package soccer;
 
-abstract class Player {
+abstract class Player extends Team{
+
+    // abstract class extends an abstract class? then the class extending player such as midfield, forwards
+    // defender, goalie classes, must also must Implement the abstract methods of Player and Team
 
     // ABSTRACT CLASS is a class that can serve as a superclass, but cannot be directly instantiated. A class is defined
     // as abstract by using the ABSTRACT KEYWORD in the class definition. Abstract classes can define abstract methods,

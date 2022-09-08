@@ -33,7 +33,7 @@ public class SoccerTeam extends Team{
         return "blue, red and gold";
     }
 
-    //
+    // implements the abstract methods from Interface Sport Class
     public void sport(){
         System.out.println("Soccer");
     }

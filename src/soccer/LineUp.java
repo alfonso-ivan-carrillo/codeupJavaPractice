@@ -15,6 +15,7 @@ public class LineUp {
         System.out.println("Current Number: " + ethan.number);
         ethan.setNumber(6);
         System.out.println("New Number: " + ethan.number);
+        System.out.println(ethan.teamColors());
 
         System.out.println("_______________________");
 

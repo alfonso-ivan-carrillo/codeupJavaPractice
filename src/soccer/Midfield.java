@@ -18,7 +18,9 @@ class Midfield extends Player{
     }
 
     // the play(), passBall(), shootBall() and cornerBall() are abstract methods from the player class and each
-    // extending class (midfield, forward, etc) must implement its own verision of the method
+    // extending class (midfield, forward, etc) must implement its own version of the method
+
+    // Implementation of Abstract Methods from the Player Class
     public String play(){
         return "Player Core Play: distribute ball";
     }
@@ -41,11 +43,28 @@ class Midfield extends Player{
         return "Corner Ball: get to player in good position to score";
     }
 
+    // Abstract Class implementation from the Abstract Team Class
+    public String teamChant() {
+        return "hey";
+    }
+    public String teamColors(){
+        return " there";
+    }
+
+    // Abstract Class from the Interface Sport Class
+    public void sport() {
+        System.out.println("hey");
+    }
+
+    public void division(){
+        System.out.println("there");
+    }
+
 }
 
 class Forward extends Player{
 
-
+    // Implementation of Abstract Methods from the Player Class
     public String play(){
         return "Player Core Play: score goal";
     }
@@ -62,9 +81,27 @@ class Forward extends Player{
     public String cornerBall(){
         return "Corner Ball: go for goal";
     }
+
+    // Abstract Class implementation from the Abstract Team Class
+    public String teamChant() {
+        return "hey";
+    }
+    public String teamColors(){
+        return " there";
+    }
+
+    // Abstract Class from the Interface Sport Class
+    public void sport() {
+        System.out.println("hey");
+    }
+
+    public void division(){
+        System.out.println("there");
+    }
 }
 
 class Defender extends Player{
+
 
     public Defender() {
     }
@@ -81,6 +118,7 @@ class Defender extends Player{
         super(name, position, number);
     }
 
+    // Implementation of Abstract Methods from the Player Class
     public String play(){
         return "Player Core Play: stop attack";
     }
@@ -95,6 +133,23 @@ class Defender extends Player{
 
     public String cornerBall(){
         return "Corner Ball: header to the goal";
+    }
+
+    // Abstract Class implementation from the Abstract Team Class
+    public String teamChant() {
+        return "hey";
+    }
+    public String teamColors(){
+        return " there";
+    }
+
+    // Abstract Class from the Interface Sport Class
+    public void sport() {
+        System.out.println("hey");
+    }
+
+    public void division(){
+        System.out.println("there");
     }
 }
 
@@ -111,6 +166,7 @@ class Goalie extends Player{
         super(name, position, number);
     }
 
+    // Implementation of Abstract Methods from the Player Class
     public String play(){
         return "Player Core Play: stop ball";
     }
@@ -124,5 +180,22 @@ class Goalie extends Player{
 
     public String cornerBall(){
         return "Corner Ball: stop ball";
+    }
+
+    // Abstract Class implementation from the Abstract Team Class
+    public String teamChant() {
+        return "hey";
+    }
+    public String teamColors(){
+        return " there";
+    }
+
+    // Abstract Class from the Interface Sport Class
+    public void sport() {
+        System.out.println("hey");
+    }
+
+    public void division(){
+        System.out.println("there");
     }
 }
