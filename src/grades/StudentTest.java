@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class StudentTest {
 
+
     public static void main(String[] args) {
 
 
@@ -14,6 +15,7 @@ public class StudentTest {
         System.out.println(alfonso.getName());
         System.out.println("The average grade for this student is: " + alfonso.getGradeAverage());
         System.out.println(alfonso.getGrades());
+
 
     }
 }

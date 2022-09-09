@@ -17,6 +17,7 @@ public class HashMapsLesson {
     // .replace : replace a value at a given key
     // .clear : empty the map
     // .isEmpty : check if the map is empty
+    // .keyset : used to create a set out of the key elements contained in the HashMap
 
     public static void main(String[] args) {
         // hashmap   HashMap<key, value> hashmapName = new HashMap<>();
