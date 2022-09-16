@@ -46,7 +46,7 @@ public class GradeApplication {
 
         do{
             System.out.println("Here are the GitHub usernames of our students:\n");
-            System.out.println(students.keySet() + "\n \"print all\" for all students or get \"class average\"?");
+            System.out.println(students.keySet() + "\n\"print all\" for all students info, \"class average\" for entire class average or \"all grades\" to display all grades for each student");
             System.out.println("\nWhat student would you like to see more information on?");
             Scanner scn = new Scanner(System.in);
             String userInput = scn.nextLine();
@@ -60,6 +60,10 @@ public class GradeApplication {
                     students.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " : " + entry.getValue().getName() + " : " + entry.getValue().getGradeAverage()));
             } else if (userInput.equalsIgnoreCase("class average")){
                 printClassAverage( students);
+            } else if (userInput.equalsIgnoreCase("all grades")){
+                for (Student student : students.values()) {
+                    System.out.println(student.getName() + " : " + student.getGrades());
+                }
             } else {
                 System.out.printf("Sorry, no student found with the GitHub username of | %s | \n", userInput);
                 break;
