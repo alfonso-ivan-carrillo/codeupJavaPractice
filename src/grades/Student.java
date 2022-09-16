@@ -43,6 +43,7 @@ public class Student {
         for ( int grade : grades){  // takes the value of the element instead of the index
             sum += grade;
         }
+        // add round Math method to round result to decimals
         return (round(sum / grades.size()));
     }
 
