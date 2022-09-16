@@ -18,12 +18,6 @@ public class GradeApplication {
         System.out.println(sum / avgs.size());
     }
 
-
-    public static void allStudents(String username, Student student){
-        System.out.printf("%s, %s, %.2f \n", student.getName(), username, student.getGradeAverage());
-    }
-
-
     public static void gradeReport(){
         HashMap<String, Student> students = new HashMap<>();
         Student alfonso = new Student("alfonso carrillo");
@@ -59,10 +53,7 @@ public class GradeApplication {
                     System.out.printf("name: %s -- GitHub Usernames: %s \nStudent's Grades %s \nGrade Average: %.2f \n", students.get(userInput).getName(), userInput, students.get(userInput).getGrades(), students.get(userInput).getGradeAverage());
 
             } else if (userInput.equalsIgnoreCase("print all")){
-                for (Student name: students.values()) {
-                    System.out.println(name.getName() + " " + name.getGradeAverage());
-                    System.out.println(students.values());
-                }
+                    students.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " : " + entry.getValue().getName() + " : " + entry.getValue().getGradeAverage()));
 
             } else {
                 System.out.printf("Sorry, no student found with the GitHub username of | %s | \n", userInput);
@@ -74,7 +65,7 @@ public class GradeApplication {
     }
 
     public static void main(String[] args) {
-//
+
 //        HashMap<String, Student> students = new HashMap<>();
 //        Student alfonso = new Student("alfonso");
 //        alfonso.addGrade(90);
@@ -97,11 +88,11 @@ public class GradeApplication {
 //        ethan.addGrade(100);
 //
 //
-//        students.put("kathy", kathy);
+//        students.put("BellaGit", kathy);
 //        students.put("ethan", ethan);
-
+//
 //        System.out.println(students.keySet());
-//        System.out.println(students.containsKey("mekca"));
+//        students.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " : " + entry.getValue().getName()));
 
 
 

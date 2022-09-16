@@ -2,6 +2,8 @@ package grades;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.round;
+
 public class Student {
     private String name;
     private ArrayList<Integer> grades;
@@ -41,7 +43,7 @@ public class Student {
         for ( int grade : grades){  // takes the value of the element instead of the index
             sum += grade;
         }
-        return (sum / grades.size());
+        return (round(sum / grades.size()));
     }
 
 
