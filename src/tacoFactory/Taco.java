@@ -1,27 +1,27 @@
-package groceryproject;
+package tacoFactory;
 
-public class GroceryItem {
+public class Taco {
 
     public String name;
     public String category;
-    public int amount;
+    public int quantity;
 
-    public GroceryItem() {
+    public Taco() {
     }
 
-    public GroceryItem(String name) {
+    public Taco(String name) {
         this.name = name;
     }
 
-    public GroceryItem(String name, String category){
-        this.name = name;
-        this.category = category;
-    }
-
-    public GroceryItem(String name, String category, int amount){
+    public Taco(String name, String category){
         this.name = name;
         this.category = category;
-        this.amount = amount;
+    }
+
+    public Taco(String name, String category, int quantity){
+        this.name = name;
+        this.category = category;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -38,10 +38,10 @@ public class GroceryItem {
         this.category = category;
     }
 
-    public int getAmount(){
-        return amount;
+    public int getQuantity(){
+        return quantity;
     }
-    public void setAmount(int amount){
-        this.amount = amount;
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
     }
 }
