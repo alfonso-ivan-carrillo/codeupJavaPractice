@@ -6,22 +6,26 @@ import java.util.HashMap;
 
 public class OrderMaker {
 
-    public static void customerMaker(){
+    public static TacoOrder customerMaker(){
         Input userInput = new Input();
         String name = userInput.getString("Name for order?");
         TacoOrder customer = new TacoOrder(name);
-
-        System.out.println(customer.getCustomerName());
+//        System.out.println(customer.getCustomerName());
+//        System.out.println(customer.getOrder());
+        return customer;
 
     }
 
     public static void tacoBuilder(){
-        HashMap<String, TacoOrder> customerOrder = new HashMap<>();
-        customerMaker();
+//        HashMap<String, TacoOrder> customerOrder = new HashMap<>();
+//        customerOrder.put(customerMaker().customerName, customerMaker());
+        TacoOrder customer = customerMaker();
+        System.out.println(customer.getCustomerName());
         Taco.displayMenu();
+
         Input userInput = new Input();
-        String response = userInput.getString("Can I get a name for your order?");
-        String name = response;
+//        String response = userInput.getString("Can I get a name for your order?");
+//        String name = response;
 
         String test = userInput.getString("What taco would you like to add to your order?");
         Taco one = new Taco(test);
@@ -29,7 +33,7 @@ public class OrderMaker {
         userInput.getString("Want to add any more tacos to your oder?");
 
         System.out.println(one.getName());
-        System.out.println(name + "f");
+//        System.out.println(name + "f");
 
     }
 
