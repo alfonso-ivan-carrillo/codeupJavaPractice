@@ -2,18 +2,33 @@ package tacoFactory;
 
 import util.Input;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TacoMaker {
+public class OrderMaker {
 
+    public static void customerMaker(){
+        Input userInput = new Input();
+        String name = userInput.getString("Name for order?");
+        TacoOrder customer = new TacoOrder(name);
+
+        System.out.println(customer.getCustomerName());
+
+    }
 
     public static void tacoBuilder(){
+        HashMap<String, TacoOrder> customerOrder = new HashMap<>();
+        Menu.displayMenu();
         Input userInput = new Input();
-        String response = userInput.getString("What type of taco?");
-        Taco one = new Taco(response);
+        String response = userInput.getString("Can I get a name for your order?");
+        String name = response;
+
+        String test = userInput.getString("What taco would you like to add to your order?");
+        Taco one = new Taco(test);
+
+        userInput.getString("Want to add any more tacos to your oder?");
 
         System.out.println(one.getName());
+        System.out.println(name + "f");
 
     }
 
@@ -37,8 +52,8 @@ public class TacoMaker {
 
     public static void main(String[] args) {
 
-        tacoBuilder();
-
+//        tacoBuilder();
+        customerMaker();
 //        tacoMenu();
 //        Taco fajita = new Taco("Fajita");
 //        System.out.println(tacoOrder(fajita));

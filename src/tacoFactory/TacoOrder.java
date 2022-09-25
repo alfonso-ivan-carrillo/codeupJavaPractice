@@ -1,9 +1,12 @@
 package tacoFactory;
 
+import java.util.ArrayList;
+
 public class TacoOrder {
     public String customerName;
     public boolean toGo;
     public int orderTotal;
+    public ArrayList<Taco> order;
 
     public TacoOrder(){
     }
@@ -21,6 +24,12 @@ public class TacoOrder {
         this.customerName = customerName;
         this.toGo = toGo;
         this.orderTotal = orderTotal;
+    }
+    public TacoOrder(String customerName, boolean toGo, int orderTotal, ArrayList<Taco> order){
+        this.customerName = customerName;
+        this.toGo = toGo;
+        this.orderTotal = orderTotal;
+        this.order = order;
     }
 
     public String getCustomerName(){
@@ -44,4 +53,11 @@ public class TacoOrder {
         this.orderTotal = orderTotal;
     }
 
+    public ArrayList<Taco> getOrder() {
+        return order;
+    }
+
+    public void setOrder(ArrayList<Taco> order) {
+        this.order = order;
+    }
 }
