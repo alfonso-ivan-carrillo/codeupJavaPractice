@@ -17,7 +17,8 @@ public class OrderMaker {
 
     public static void tacoBuilder(){
         HashMap<String, TacoOrder> customerOrder = new HashMap<>();
-        Menu.displayMenu();
+        customerMaker();
+        Taco.displayMenu();
         Input userInput = new Input();
         String response = userInput.getString("Can I get a name for your order?");
         String name = response;
@@ -52,8 +53,8 @@ public class OrderMaker {
 
     public static void main(String[] args) {
 
-//        tacoBuilder();
-        customerMaker();
+        tacoBuilder();
+//        customerMaker();
 //        tacoMenu();
 //        Taco fajita = new Taco("Fajita");
 //        System.out.println(tacoOrder(fajita));

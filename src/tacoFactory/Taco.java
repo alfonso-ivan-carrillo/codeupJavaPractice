@@ -49,7 +49,8 @@ public class Taco {
         displayMenu.put("brisket", brisket);
         Taco elPastor = new Taco("el pastor", 3);
         displayMenu.put("el pastor", elPastor);
-        System.out.println(displayMenu.keySet());
+        System.out.println("Today's Menu:");
+        displayMenu.entrySet().stream().forEach(entry -> System.out.println(entry.getValue().getName() + " - $" + entry.getValue().getCost()));
     }
 
     public static void main(String[] args) {
