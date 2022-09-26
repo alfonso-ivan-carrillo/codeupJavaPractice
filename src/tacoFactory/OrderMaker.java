@@ -21,6 +21,7 @@ public class OrderMaker {
 //        customerOrder.put(customerMaker().customerName, customerMaker());
         TacoOrder customer = customerMaker();
         System.out.println(customer.getCustomerName());
+
         Taco.displayMenu();
 
         Input userInput = new Input();
@@ -29,6 +30,8 @@ public class OrderMaker {
 
         String test = userInput.getString("What taco would you like to add to your order?");
         Taco one = new Taco(test);
+        // can TacoOrder.setOrder be used to store customer choices?
+
 
         userInput.getString("Want to add any more tacos to your oder?");
 
