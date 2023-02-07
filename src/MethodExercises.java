@@ -107,11 +107,11 @@ public class MethodExercises {
         String rollDice = "yes";
 
         Scanner ask = new Scanner(System.in);
-        System.out.println("Roll dice?");
+        System.out.println("Roll dice? (yes/no)");
         rollDice = ask.nextLine();
         System.out.println(rollDice);
 
-        while (rollDice.equalsIgnoreCase("yes")) {
+        while (rollDice.equalsIgnoreCase("yes") || rollDice.equalsIgnoreCase("y")) {
             Scanner numSides = new Scanner(System.in);
             System.out.println("Please enter the number of sides to dice.");
             int sides = numSides.nextInt();

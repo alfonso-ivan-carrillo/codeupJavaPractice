@@ -19,7 +19,7 @@ public class HighLow {
             } else if (userGuess < cpuNumber) {
                 System.out.println("Higher!");
                 counter += 1;
-                System.out.println(counter);
+                System.out.println("Number of Guess: "+ counter);
                 if (counter == 5){
                     System.out.println("Max guess limit reached.");
                     keepGoing = "no";
@@ -31,7 +31,7 @@ public class HighLow {
             } else if (userGuess > cpuNumber) {
                 System.out.println("Lower!");
                 counter += 1;
-                System.out.println(counter);
+                System.out.println("Number of Guess: "  + counter);
                 if (counter == 5){
                     System.out.println("Max guess limit reached.");
                     keepGoing = "no";

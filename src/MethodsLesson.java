@@ -1,8 +1,14 @@
 public class MethodsLesson {
 
+//todo  basic method syntax
+//      public static returnType methodName([param1, [, param2[, ....]]){
+//          (the statements of the method)
+//          (a return statement, if a return type is declared)
+//      }
+// .
 //    Method overloading is defining multiple methods with the same name, but with different parameter type, parameter order, or number of parameters.
     public static void sayHello(){
-        System.out.println("Hello");
+        System.out.println("Hello, World");
     }
 
     public static void sayHello(int times){
@@ -26,17 +32,28 @@ public class MethodsLesson {
         return s.toUpperCase() + "!!!";
     }
 
-    public static void changeString(String s) {
-        s = "Wub a lub a dub dub";
+    public static char charUp(char c){
+        return Character.toUpperCase(c);
     }
 
+    public static void changeString(String s) {
+        s = "Wub a lub a dub dub";
+        System.out.println(s);
+    }
+
+//todo      Recursion - the concept of solving a problem by dividing it into smaller chunks.
+//          Core idea of recursion is creating a method that calls itself, but with different
+//          parameters that were originally passed
     public static void count (int n){
+//todo  Whenever you are writing a recursive method, you must make sure to have a base case or a stop
+//      condition so that the methods does not call itself over and over again indefinitely.
         if(n <= 0){
             System.out.println("All done!");
             return;
         }
         System.out.println(n);
-        count(n - 1);        // calls itself but reduce the value by 1 until n == 0
+//todo   Recursion happening below - calls itself, but parameters are different, wil reduce value by 1 until n == 0
+        count(n - 1);
     }
 
 //    public static long getPower(int base, int exponent) {
@@ -47,8 +64,9 @@ public class MethodsLesson {
 //        return result;
 //    }
 
+//todo  Recursion example
     public static long getPower(int base, int exponent) {
-        if (exponent == 0) {
+        if (exponent == 0) {        //todo  base cases
             return 1;
         } else if (exponent == 1) {
             return base;
@@ -59,7 +77,7 @@ public class MethodsLesson {
     }
     public static void main(String[] args) {
 
-        System.out.println(getPower(2, 3));
+        System.out.println(getPower(5, 3));
 
 
         sayHello(5);
@@ -72,13 +90,21 @@ public class MethodsLesson {
 
         System.out.println(shout("party"));
 
+//todo  note to declare a CHAR use only single quotes, if double quotes used, java will consider it a STRING
+        char eta = 'c';
+        System.out.println(charUp('e'));
+        System.out.println(charUp(eta));
+        System.out.println(charUp('a'));
+
         String codeUp = "Codeup";
 
-        changeString(codeUp);
+        changeString(codeUp);       // Value will be: Wub a lub a dub dub
+
 
         System.out.println(codeUp); // Value still Codeup
 
         count(5);
+        count(10);
 
     }
 }
