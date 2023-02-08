@@ -66,6 +66,11 @@ public class Employee extends Person{
         System.out.println(paul.sayHello());  // Person class
         System.out.println(john.sayHello());  // Employee extended class - overrides person method
 
+        Employee alfonso = new Employee("alfonso");
+        System.out.println(alfonso.name);
+        alfonso.setAge(47);
+        System.out.println(alfonso.getAge());
+
 
     }
 }

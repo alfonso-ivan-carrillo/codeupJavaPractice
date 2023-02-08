@@ -1,3 +1,7 @@
+import java.util.Arrays;
+
+import static java.util.Arrays.copyOf;
+
 public class ArrayLesson {
 
 
@@ -12,10 +16,12 @@ public class ArrayLesson {
 //        Java arrays have a fixed length (accessed with the .length property)
 //        that must be defined when they are created.
         prices = new double[4];
+        System.out.println("Number of elements in [prices] array: " + prices.length);
 
 //        The size of the array can be either a literal (like in the example above), a constant, or a variable.
         final int Number_Of_Beatles = 4;
         ArrayLesson[] theBeatles = new ArrayLesson[Number_Of_Beatles];
+        System.out.println("Number of elements in [theBeatles] array: " + theBeatles.length);
 //        Here we define a variable named theBeatles whose type is an array where
 //        each element has the type of ArrayLesson. When we assign to the variable,
 //        we create a new array where the size is determined by a constant
@@ -23,6 +29,7 @@ public class ArrayLesson {
 
         int numberOfBugs = (int) Math.floor(Math.random() * 100);
         int[] myCode = new int [numberOfBugs];
+        System.out.println("Array length is now: " + myCode.length);
 //        the size of the myCode array is determined by a variable defined ahead
 //        of time. In this example, the size of the array is determined by a
 //        random number.
@@ -50,6 +57,9 @@ public class ArrayLesson {
         System.out.println(beatles[0]); // "John"
         System.out.println(beatles[1]); // "Paul"
         System.out.println(beatles[2]); // "Ringo"
+        for(var i = 0; i <= beatles.length - 1; i++){
+            System.out.println("Beatles name: " + beatles[i] + "index number: " + i);
+        }
 
 //  ArrayIndexOutOfBoundsException !
        // beatles[3] = "George";
@@ -112,7 +122,7 @@ public class ArrayLesson {
 //        Sorts the elements of an array into ascending order.
 
 
-    // Two - Dimensional Arrays
+    // Two - Dimensional Arrays - (an array that holds arrays)
 //  we can define an array whose elements are themselves arrays. This is called
 //  a two-dimensional array, or a matrix. You can think of a two-dimensional
 //  array like a grid, with rows and columns.
@@ -122,10 +132,10 @@ public class ArrayLesson {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-
-        System.out.println(matrix[1][0]);   // 4 access the first element in the second row
-        System.out.println(matrix[0][2]);   // 3 the last element in the first row
-        System.out.println(matrix[2][0]);   // 7 the first element in the last row
+        //      (array(row)(element))
+        System.out.println(matrix[1][0]);   // 4 --> access the first element in the second row
+        System.out.println(matrix[0][2]);   // 3 --> the last element in the first row
+        System.out.println(matrix[2][0]);   // 7 --> the first element in the last row
 
 
         for (int[] row : matrix){
@@ -140,5 +150,12 @@ public class ArrayLesson {
         }
         System.out.println("+---+---+---+");
 
+
+        // array static method - Arrays.copyOf(array to copy, length)
+        String[] testCopy = Arrays.copyOf(languages, 2);
+        for (String element: testCopy){
+            System.out.println(element);
+        }
+        System.out.println(testCopy.length);
     }
 }

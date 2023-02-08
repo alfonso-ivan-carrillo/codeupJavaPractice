@@ -3,6 +3,9 @@ public class Student {
     public String cohort;
 
     private double grade;
+    public String sayBye(){
+        return String.format("%s says bye!", this.name);
+    }
 
     public Student(String studentName) {   // Constructor
 //        name = studentName;
@@ -45,6 +48,8 @@ public class Student {
     // access to those fields. ***
 
 
+
+
     public static void main(String[] args) {
         Student s1 = new Student("Student A");
         Student s2 = new Student("Student B", "Voyagers");
@@ -54,6 +59,8 @@ public class Student {
         System.out.println("------------");
 
         Student s4 = new Student("joe", 80.0);
+        s4.cohort = "regulus";
+        System.out.println(s4.sayBye());
         System.out.println(s4.name);
         System.out.println(s4.grade);  // the private field will print out since its within the same class
         System.out.println(s4.getInfo());  // if trying to access  field out of class, would use the method created to

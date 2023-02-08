@@ -3,10 +3,10 @@ public class Person {
     public String firstName;
     public String lastName;
 
-    protected String name; // instance property
+    protected String name; // instance property - because no static keyword is present
 
     private int age;
-    public static long worldPopulation = 7_500_000_000L; // class property
+    public static long worldPopulation = 7_500_000_000L; // class property - because of the static keyword is used
 
     public Person(String name) {
         this.name = name;
@@ -80,6 +80,8 @@ public class Person {
         Person kathy = new Person();
         kathy.firstName = "Kathy";      // instance fields
         kathy.lastName = "Maddocks";    // instance fields
+        kathy.age = 45;
+        System.out.println("kathy's age: "+ kathy.age);
         // The above code will print out:
         //  A Person is being created!
         // because the constructor is called whenever we use the new keyword to create an instance of the class
